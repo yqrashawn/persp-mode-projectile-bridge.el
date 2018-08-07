@@ -145,7 +145,8 @@
          (persp-mode-projectile-bridge-find-perspective-for-buffer
           (current-buffer))))
     (when persp
-      (persp-add-buffer (current-buffer) persp nil nil))))
+      (persp-add-buffer (current-buffer) persp nil nil)
+      (persp-frame-switch (persp-name persp)))))
 
 (defun persp-mode-projectile-bridge-find-perspectives-for-all-buffers ()
   (when (and persp-mode-projectile-bridge-mode)
